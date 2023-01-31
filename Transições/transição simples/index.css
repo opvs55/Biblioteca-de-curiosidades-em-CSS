@@ -1,0 +1,22 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+/* a parte acima determina o tamanho do meu espaço de 
+trabalho os comandos são para fins de centralizar o conteudo*/
+
+button{
+    width: 200px;
+    height: 50px;
+    background-color: black;
+    transition: 1s;  /*determina o tempo de duração da transição*/
+    color: white;
+}
+
+/*hover é estado de um elemento quando o usuário passar o mouse sobre ele*/
+button:hover{
+    background-color: white;
+    color: black;
+}
