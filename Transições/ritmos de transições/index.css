@@ -1,0 +1,55 @@
+.container{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 100vh;
+}
+/* a parte acima determina o tamanho do meu espaço de 
+trabalho os comandos são para fins de centralizar o conteudo*/
+
+div .move{ /*chamei a div porém determinei que queria 
+    apenas que essas propriedades na class .move */
+    width: 200px;
+    height: 50px;
+    background-color: black;
+    transition: 2s;  /*determina o tempo de duração da transição*/
+    color: white;
+    display: flex; /*usei para centralizar o texto*/
+    justify-content: center;
+    align-items: center;
+    transition-timing-function: translate();/*aqui estou determinando função
+    um valor, um parametro*/
+    transition-duration: 2s;
+}
+
+/*hover é estado de um elemento quando o usuário passar o mouse sobre ele*/
+
+
+#ease{
+    transition-timing-function: ease;
+    /*aqui estou pasando o valor para a função acima*/
+}
+
+#ease-in{
+    transition-timing-function: ease-in;
+    /*cada uma desta vai determinar um ritmo da animação*/
+}
+
+#ease-out{
+    transition-timing-function: ease-out;
+}
+
+#ease-in-out{
+    transition-timing-function: ease-in-out;
+}
+
+#linear{
+    transition-timing-function: linear;
+}
+
+.move:hover{
+    transform: translate(500px);
+
+    /*translate determina o valor da transformação
+    o quando o bloco vai se mover em Px*/
+}
