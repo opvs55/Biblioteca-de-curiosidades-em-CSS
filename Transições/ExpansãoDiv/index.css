@@ -1,0 +1,50 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+/* a parte acima determina o tamanho do meu espaço de 
+trabalho os comandos são para fins de centralizar o conteudo*/
+
+button{
+    width: 200px;
+    height: 50px;
+    background-color: black;
+    transition: all 2s ease;  /*determina o tempo de duração da transição*/
+    color: white;
+}
+
+/*hover é estado de um elemento quando o usuário passar o mouse sobre ele*/
+.button1:hover{
+    background-color: white;
+    color: black;
+    width: 400px;/*mudança aqui para crescer horizontalmente*/
+    height: 100px;/*mudança aqui para crescer verticalmente*/
+    font-size: 2em;/*mudança no tamanho da fonte*/
+}
+
+/*aqui apenas aconteceu uma alteração no tamanho horizontal da div
+perceba qu para isto não atrapalhar o restante da aplicação
+é interessante declarar uma div para alocar o botão que tenha
+exatamente o tamanho do efeito*/
+
+.button2:hover{
+    background-color: white;
+    color: black;
+    opacity: 0; /*aqui fiz a atelção de opacidade para 0, o valor normal é 100*/
+}
+
+.button3:hover{
+    border-radius: 50px;
+    /*border radius permite você arredondar as bordas de um elemento*/
+}
+
+
+.button4:hover{
+    transform: rotate(360deg) scale(1.5);
+    /*aqui o rotate está com um parâmetro de 360deg
+    ou seja, dê uma volta completa e cresça numa escala de
+    1.5, logo, vai girar e crescer*/ 
+}
