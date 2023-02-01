@@ -17,6 +17,9 @@ button{
 
 /*hover é estado de um elemento quando o usuário passar o mouse sobre ele*/
 button:hover{
-    background-color: white;
-    color: black;
+    width: 500px;
 }
+
+/*aqui ocorre um aumento da propriedade que determina a largura, width
+repare que para não afetar o restante da aplicação é interessante colocar
+esse button dentro de um div com o tamanho ou maior que o horizonte de evento*/
