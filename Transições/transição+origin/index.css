@@ -1,0 +1,61 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+/* a parte acima determina o tamanho do meu espaço de 
+trabalho os comandos são para fins de centralizar o conteudo*/
+
+a {
+    text-decoration: none;/*zero o estilo do texto*/
+    color: black;
+    font-size: 5em;
+    border: 5px solid black;
+    padding: 40px 80px;
+    position: relative;
+    overflow: hidden;/*tudo que estiver fora do elemento, não vai aparecer*/
+}
+
+
+/*A propriedade "position: relative" faz com que um elemento seja 
+posicionado em relação ao seu elemento pai, em vez de ser posicionado 
+de acordo com a estrutura normal da página (que é "position: static" por padrão). 
+Isso significa que, quando você usa "position: relative", pode usar as propriedades 
+"top", "bottom", "left" e "right" para mover o elemento em relação à sua posição original, 
+sem afetar a posição dos elementos adjacentes.
+
+Resumidamente, o elemento com "position: relative" é posicionado em relação ao seu elemento pai.*/
+
+/*acima estou definindo os valores da propriedade <a></a>*/
+
+
+
+/*o efeito é basicamente deslocar o background para a posição de -90deg usando o before, que define
+valor da propriedade do elemento*/
+
+
+/*before é uma pseudoclasse que passe valores para o componentes antes da renderização*/ 
+a:before{
+    content: "";
+    position: absolute;
+    left: 0;/*posicionamento do elemento*/
+    top: 0;/*posicionamento do elemento*/
+    background-color: red;
+    height: 100%;
+    width: 100%;
+    z-index: -1;       /*determina uma hierarquia de posições entre planos*/
+    transform-origin: bottom left; /*ponto de origim*/
+    transform: rotate(-90deg);
+    transition: transform 1s;
+}
+
+/*A propriedade "position: absolute" faz com que um elemento seja posicionado 
+em relação ao elemento pai mais próximo que tenha posicionamento não-estático*/
+
+a:hover:before{
+    transform: rotate(0deg);
+}
+
+/*o hover vai chamar o elemento que está deslocado para a posição de 0deg*/
