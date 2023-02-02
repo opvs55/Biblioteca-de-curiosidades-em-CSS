@@ -1,0 +1,40 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+/* a parte acima determina o tamanho do meu espaço de 
+trabalho os comandos são para fins de centralizar o conteudo*/
+
+.button{
+    width: 300px;
+    height: 300px;
+    transition: 1s;  /*determina o tempo de duração da transição*/
+    color: black;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+/*o before repassa valores para o elemento antes da renderização*/
+.button:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    background: url(japanWave.png); /*chamando a imagem*/
+    animation: wave 2s linear infinite; /*chama o wave da função @keyframes*/
+    /*2s é o tempo da animação, linear é a natureza e infitite é quantas vezes deve ser executado*/
+}
+
+@keyframes wave {
+    0% {background-position-y: 0;}
+    100% {background-position-y: 300px;}
+    /*backgroundPosition é um valor que move o fundo, o valor y é referente a escala X e Y, horizontal e vertical
+    temos também o eixo Z profundidade*/
+}
