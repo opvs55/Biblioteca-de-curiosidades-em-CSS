@@ -1,0 +1,45 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+/* a parte acima determina o tamanho do meu espaço de 
+trabalho os comandos são para fins de centralizar o conteudo*/
+
+.exe0, .exe1  {
+    width: 300px;
+    height: 200px;
+    /*tamanho*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*centralização*/
+    background-color: black;
+    transition: 1s;  /*determina o tempo de duração da transição*/
+    color: white;
+    /*cor, tempo de transição e cor da fonte*/
+}
+
+/*perceba que o comando transform-origin está determinando a origem a animação*/
+.exe0{
+    transform-origin: top;
+}
+
+/* mas poderia ser top right, top left*/
+
+.exe1{
+    transform-origin: bottom;
+}
+
+
+.exe0:hover{
+    transform: rotate(45deg);
+}
+
+
+.exe1:hover{
+    transform: rotate(45deg);
+}
+

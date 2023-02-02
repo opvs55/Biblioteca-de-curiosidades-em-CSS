@@ -18,6 +18,7 @@ button{
 /*hover é estado de um elemento quando o usuário passar o mouse sobre ele*/
 button:hover{
     width: 500px;
+    background-color: aquamarine;
 }
 
 /*aqui ocorre um aumento da propriedade que determina a largura, width
