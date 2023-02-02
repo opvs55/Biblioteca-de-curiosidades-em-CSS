@@ -1,0 +1,43 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+
+    perspective: 500px;
+    /*A propriedade "perspective" em CSS é usada 
+    para criar efeitos de profundidade tridimensional em elementos.*/
+}
+/* a parte acima determina o tamanho do meu espaço de 
+trabalho os comandos são para fins de centralizar o conteudo*/
+
+.rotateX, .rotateZ, .rotateY  {
+    width: 150px;
+    height: 150px;
+    /*tamanho*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*centralização*/
+    background-color: black;
+    transition: 1s;  /*determina o tempo de duração da transição*/
+    color: white;
+    /*cor, tempo de transição e cor da fonte*/
+}
+
+.rotateX:hover{
+    transform: rotateX(50deg);
+}
+
+
+.rotateY:hover{
+    transform: rotateY(50deg);
+}
+
+.rotateZ:hover{
+    transform: rotateZ(50deg);
+}
+
+/*hover é estado de um elemento quando o usuário passar o mouse sobre ele*/
+
