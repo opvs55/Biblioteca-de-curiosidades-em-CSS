@@ -1,0 +1,44 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+/* a parte acima determina o tamanho do meu espaço de 
+trabalho os comandos são para fins de centralizar o conteudo*/
+
+.aumentar, .mover, .rotacionar, .esticar  {
+    width: 100px;
+    height: 100px;
+    /*tamanho*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*centralização*/
+    background-color: black;
+    transition: 1s;  /*determina o tempo de duração da transição*/
+    color: white;
+    /*cor, tempo de transição e cor da fonte*/
+}
+
+.aumentar:hover{
+    transform: scale(2);
+}
+/*percaba que todos os hover estão chamando um transform com uma propriedade*/
+
+.mover:hover{
+    transform: translateX(400px);
+}
+
+.rotacionar:hover{
+    transform: rotate(360deg);
+}
+
+.esticar:hover{
+    transform: skewX(25deg);
+}
+
+
+/*hover é estado de um elemento quando o usuário passar o mouse sobre ele*/
+
