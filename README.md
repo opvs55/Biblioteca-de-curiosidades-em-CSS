@@ -15,5 +15,4 @@ referências até então:
 BootCamp Labenu
 <br>
 Creative Advanced CSS Animations - Create 100 Projects! - udemy
-<br>
-chatgpt
+
