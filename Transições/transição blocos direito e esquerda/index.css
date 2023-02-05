@@ -1,0 +1,59 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.button{
+    width: 200px;
+    height: 50px;
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button::before{
+    content: "";
+    position: absolute;
+    background-color: black;
+    transform: skewX(40deg);/*faz o acerto da forma nas arestas verticais*/
+    left: -1%;/*posição do bloco*/
+    top: -5px;/*posição do bloco*/
+    z-index: -1;
+    width: 100px;
+    height: 50px;
+    transition: 2s;
+}
+
+
+/*after vai ser uma pseudoclasse para a renderização do componente*/
+.button::after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    transition: 2s;
+    transform: skewX(40deg);
+    right: -1%;
+    bottom: -5px;
+    z-index: -1;
+    width: 100px;
+    height: 50px;
+
+}
+
+
+/*aqui eu chamado cada classe, before e hover e faço seu respectivo hover*/
+.button:hover::before{
+    transform: skewX(0deg); /*acerto das arestas*/
+    left: 50%; /*movimentação do bloco*/
+    top: 0;/*movimentação do bloco*/
+}
+
+.button:hover::after{
+    transform: skewX(0deg);
+    right: 50%;
+    bottom:0;
+}
